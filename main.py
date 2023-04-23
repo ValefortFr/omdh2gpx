@@ -17,7 +17,7 @@ while len(data) > position:
     latitude = int.from_bytes(data[position:position + 4], "little") / 10 ** 6
     longitude = (int.from_bytes(data[position + 4:position + 8], "little") - 2 ** 32) / 10 ** 6
 
-    gpx += f'<trkpt lat="{latitude}" lon="{longitude}"><time>{datetime.strftime(time_point, "%Y-%m-%dT%H:%M:%SZ")}</time></trkpt>' \
+    gpx += f'<trkpt lat="{latitude}" lon="{longitude}"><time>{datetime.strftime(time_point, "%Y-%m-%dT%H:%M:%SZ")}</time></trkpt>'
 
     time_point += timedelta(seconds=5)
     position += 40 if position % 3 else 20
