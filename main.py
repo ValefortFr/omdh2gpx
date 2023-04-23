@@ -13,7 +13,7 @@ with open(f"{file_name}.OMD", 'rb') as file:
     data = file.read()
 
 position = 0
-while len(data) > position:
+while len(data) > position + 20:
     latitude = int.from_bytes(data[position:position + 4], "little") / 10 ** 6
     longitude = (int.from_bytes(data[position + 4:position + 8], "little") - 2 ** 32) / 10 ** 6
 
