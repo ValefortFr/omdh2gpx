@@ -7,7 +7,7 @@ file_name = 'ACT_0000'
 with open(f"{file_name}.OMH", 'rb') as file:
     data = file.read()
 
-time_point = datetime(2000 + int(data[14]), data[15], data[16], data[17], data[18], data[19])
+time_point = datetime(2000 + int(data[14]), data[15], data[16], data[17], data[18])
 
 with open(f"{file_name}.OMD", 'rb') as file:
     data = file.read()
