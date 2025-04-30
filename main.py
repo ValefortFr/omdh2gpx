@@ -14,8 +14,8 @@ with open(f"{file_name}.OMD", 'rb') as file:
 
 position = 0
 while len(data) > position + 20:
-    latitude = int.from_bytes(data[position:position + 4], "little") / 10 ** 6
-    longitude = (int.from_bytes(data[position + 4:position + 8], "little") - 2 ** 32) / 10 ** 6
+    latitude = int.from_bytes(data[position:position + 4], byteorder='little', signed=True) / 10 ** 6
+    longitude = int.from_bytes(data[position + 4:position + 8], byteorder='little', signed=True) / 10 ** 6 
 
     gpx += f'<trkpt lat="{latitude}" lon="{longitude}"><time>{datetime.strftime(time_point, "%Y-%m-%dT%H:%M:%SZ")}</time></trkpt>'
 
