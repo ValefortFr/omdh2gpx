@@ -10,8 +10,8 @@ Plusieurs convertisseurs existaient déjà sur github mais pouvaient être compl
 
 # Usage
 
-Execute this script in a folder where the ACT_0000.OMH and ACT_0000.OMD are located, it will output an ACT_0000.gpx in that same folder.
+python omdh2gpx.py _files_path_ (without the extension)
 
-# Utilisation
+ex : python omdh2gpx.py D:\runs\ACT_0005 
 
-Exécuter ce script dans un répertoire où les fichiers ACT_0000.OMH et ACT_0000.OMD sont présents produira un fichier ACT_0000.gpx dans ce même répertoire.
+This would look for ACT_0005.OMH and ACT_0005.OMD in D:\runs\ and then output D:\runs\ACT_0005.gpx 
